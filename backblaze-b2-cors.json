@@ -1,0 +1,13 @@
+[
+  {
+    "corsRuleName": "tongAnUpload",
+    "allowedOrigins": [
+      "https://*.vercel.app",
+      "http://localhost:3000"
+    ],
+    "allowedMethods": ["PUT", "GET", "HEAD"],
+    "allowedHeaders": ["*"],
+    "exposeHeaders": ["ETag", "Content-Length", "Content-Type"],
+    "maxAgeSeconds": 86400
+  }
+]
