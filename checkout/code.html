@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tong An Photography - Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#474746",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary": "#2f3131",
+                        "on-primary-container": "#554300",
+                        "primary-fixed-dim": "#e9c349",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "on-surface": "#e5e2e1",
+                        "outline": "#99907c",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "secondary": "#c8c6c5",
+                        "tertiary-container": "#b3b3b3",
+                        "on-secondary": "#313030",
+                        "surface-container": "#201f1f",
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#b7b5b4",
+                        "primary-fixed": "#ffe088",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-fixed": "#e5e2e1",
+                        "outline-variant": "#4d4635",
+                        "surface-tint": "#e9c349",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "surface-container-highest": "#353534",
+                        "on-primary-fixed": "#241a00",
+                        "secondary-container": "#474746",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#3c2f00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#444545",
+                        "primary-container": "#d4af37",
+                        "surface-bright": "#3a3939",
+                        "tertiary": "#cfcece",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "primary": "#f2ca50",
+                        "inverse-primary": "#735c00",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-variant": "#353534",
+                        "tertiary-fixed": "#e3e2e2",
+                        "on-surface-variant": "#d0c5af",
+                        "on-background": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Playfair Display"],
+                        "caption": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30 flat no shadows flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+<div class="flex items-center text-primary font-headline-md text-headline-md-mobile md:text-headline-md hover:text-primary transition-colors duration-300 active:scale-95 transition-transform cursor-pointer">
+<span class="material-symbols-outlined mr-4" data-icon="menu">menu</span>
+</div>
+<div class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary tracking-widest text-center flex-1">
+            TONG AN
+        </div>
+<div class="flex items-center text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform cursor-pointer">
+<span class="material-symbols-outlined ml-4" data-icon="shopping_cart">shopping_cart</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-20 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Header -->
+<div class="col-span-1 md:col-span-12 mb-12">
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Checkout</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Secure your high-resolution licensing.</p>
+</div>
+<!-- Left Column: Order Summary & Form -->
+<div class="col-span-1 md:col-span-7 space-y-12">
+<!-- Order Summary Section -->
+<section class="bg-surface-container-low border border-surface-container-high rounded-xl p-8">
+<h2 class="font-headline-md text-headline-md mb-8 text-on-surface">Order Summary</h2>
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="flex items-center gap-6 pb-6 border-b border-surface-container-high">
+<div class="w-32 h-20 bg-surface-container-high rounded overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast landscape photograph of Angkor Wat at dawn. The scene is captured in a minimalist, moody style with deep shadows and striking golden hour light piercing through the ruins. The aesthetic is prestigious and gallery-quality, fitting a high-end photography portfolio. Atmospheric depth and a 16:9 aspect ratio enhance the cinematic feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkiaxoNL_TPoXLrT2MXYi9QP2coqclJzvFgLTEsH1xrZQl5GvK3vwG24rcTpUV9IVLcAyIakiXAvqta4BAu0K5dhrj8yM6enzjCSGHT2iETwDXAvYdLkC3ZhZtdzAxKsYYzOzomrx4LLDxNEttUVzS3uc_kVXCQMALCwXKajrphNVjtIKNkknFCbMDinB6Us9W_ojqGcKBbKNFj7eIwnDIVoav34dxNChHBbpfGlOHlbfxqyMlRn6U9A"/>
+</div>
+<div class="flex-1">
+<h3 class="font-label-md text-label-md text-on-surface mb-1">Angkor Dawn #04</h3>
+<p class="font-caption text-caption text-on-surface-variant">Commercial License - Full Res</p>
+</div>
+<div class="font-body-lg text-body-lg text-primary">$450.00</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-6 pb-6 border-b border-surface-container-high">
+<div class="w-32 h-20 bg-surface-container-high rounded overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A stunning, moody portrait of a traditional Cambodian dancer captured in extreme chiaroscuro lighting. The composition is highly cinematic with a completely black background, drawing all attention to the subject. Subtle gold accents highlight the dancer's intricate jewelry. The overall vibe is minimalist, exclusive, and evocative of fine art photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYH4A-SZuXsGvw06LfgV457gVcGLBgAudbFhKqF-svmvsd2G0eZ__aOkRh86bqsRd05R5XwHR54939SnlQCGRXsbgYfuzZ-8sl5vE2UCqy0PFGCHdSveXVnX5E7AwUN31lVKOSP5xwLx_7ZNrptcA2rJ_ndEHtD9g_FJVgjhB5RyfDpUsZUhedRhHw-3ntNxB4hDAn3VP1Qsb9q0oLGAthME78BJHvUhkm92QNdoxotDis6Oknezxn0g"/>
+</div>
+<div class="flex-1">
+<h3 class="font-label-md text-label-md text-on-surface mb-1">Apsara Shadows</h3>
+<p class="font-caption text-caption text-on-surface-variant">Editorial License - Web Res</p>
+</div>
+<div class="font-body-lg text-body-lg text-primary">$150.00</div>
+</div>
+</div>
+<div class="mt-8 flex justify-between items-center pt-6">
+<span class="font-body-lg text-body-lg text-on-surface-variant">Total Amount</span>
+<span class="font-headline-md text-headline-md text-primary">$600.00</span>
+</div>
+</section>
+<!-- Customer Details Form -->
+<section class="bg-surface-container-low border border-surface-container-high rounded-xl p-8">
+<h2 class="font-headline-md text-headline-md mb-8 text-on-surface">Details</h2>
+<form class="space-y-6">
+<div>
+<label class="block font-label-md text-label-md uppercase text-on-surface-variant mb-2">Full Name</label>
+<input class="w-full bg-surface-container border border-surface-container-high rounded-lg p-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md" placeholder="Enter your full name" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md uppercase text-on-surface-variant mb-2">Email Address</label>
+<input class="w-full bg-surface-container border border-surface-container-high rounded-lg p-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md" placeholder="Enter your email" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md uppercase text-on-surface-variant mb-2">Phone Number</label>
+<input class="w-full bg-surface-container border border-surface-container-high rounded-lg p-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md" placeholder="Enter your phone number" type="tel"/>
+</div>
+</form>
+</section>
+</div>
+<!-- Right Column: Payment & QR -->
+<div class="col-span-1 md:col-span-5">
+<section class="bg-surface-container-highest border border-outline-variant rounded-xl p-8 sticky top-32">
+<div class="text-center mb-8">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Payment</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Order #TAP-2024-8931</p>
+</div>
+<!-- QR Code Placeholder -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-surface-container-high mb-8 flex flex-col items-center justify-center relative group overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<div class="w-48 h-48 bg-surface-container flex items-center justify-center border border-outline-variant/50 rounded mb-6">
+<span class="material-symbols-outlined text-6xl text-primary/50" data-icon="qr_code_2">qr_code_2</span>
+</div>
+<div class="text-center">
+<span class="inline-flex items-center justify-center px-3 py-1 border border-outline-variant rounded-full font-label-md text-caption text-on-surface-variant mb-2">KHQR / ABA Bank</span>
+<p class="font-body-md text-body-md text-primary">Scan to pay $600.00</p>
+</div>
+</div>
+<p class="font-caption text-caption text-on-surface-variant text-center mb-8 px-4">
+                    Please complete the payment using the QR code. Your download will become available after payment verification.
+                </p>
+<!-- Actions -->
+<div class="space-y-4">
+<button class="w-full py-4 px-6 bg-transparent border border-primary text-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="upload_file">upload_file</span>
+                        Upload Payment Proof
+                    </button>
+<button class="w-full py-4 px-6 bg-primary text-background font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 hover:bg-primary-fixed transition-colors">
+                        Confirm Payment
+                        <span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer (Suppressed based on Transactional Intent Rule, but structure included as comment if needed) -->
+<!-- 
+    <footer class="w-full mt-20 border-t border-outline-variant flat bg-surface-dim">
+        <div class="max-w-container-max mx-auto px-margin-desktop py-20 flex flex-col items-center text-center space-y-12">
+            <div class="font-headline-lg text-headline-lg text-primary">TONG AN PHOTOGRAPHY</div>
+            <div class="flex gap-8">
+                <a href="#" class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Gallery</a>
+                <a href="#" class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Collections</a>
+                <a href="#" class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">About</a>
+                <a href="#" class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Terms</a>
+            </div>
+            <div class="font-body-md text-body-md text-on-surface-variant">© 2024 Tong An Photography. All Rights Reserved.</div>
+        </div>
+    </footer> 
+    -->
+</body></html>

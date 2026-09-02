@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tong An Photography - Manage Photos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#474746",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary": "#2f3131",
+                        "on-primary-container": "#554300",
+                        "primary-fixed-dim": "#e9c349",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "on-surface": "#e5e2e1",
+                        "outline": "#99907c",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "secondary": "#c8c6c5",
+                        "tertiary-container": "#b3b3b3",
+                        "on-secondary": "#313030",
+                        "surface-container": "#201f1f",
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#b7b5b4",
+                        "primary-fixed": "#ffe088",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-fixed": "#e5e2e1",
+                        "outline-variant": "#4d4635",
+                        "surface-tint": "#e9c349",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "surface-container-highest": "#353534",
+                        "on-primary-fixed": "#241a00",
+                        "secondary-container": "#474746",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#3c2f00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#444545",
+                        "primary-container": "#d4af37",
+                        "surface-bright": "#3a3939",
+                        "tertiary": "#cfcece",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "primary": "#f2ca50",
+                        "inverse-primary": "#735c00",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-variant": "#353534",
+                        "tertiary-fixed": "#e3e2e2",
+                        "on-surface-variant": "#d0c5af",
+                        "on-background": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Playfair Display"],
+                        "caption": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        /* Webkit Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #474746;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col md:flex-row overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Navigation Drawer (Desktop) -->
+<nav class="hidden md:flex flex-col bg-surface-container-lowest h-full w-80 fixed left-0 top-0 z-[60] border-r border-outline-variant shadow-20px-40px-rgba(0,0,0,0.8) p-6 space-y-4">
+<div class="mb-8">
+<h1 class="font-headline-md text-headline-md text-primary tracking-widest">TONG AN PHOTOGRAPHY</h1>
+<p class="font-caption text-caption text-on-surface-variant mt-2 uppercase tracking-widest">Admin Portal</p>
+</div>
+<div class="flex-1 space-y-2">
+<a class="flex items-center space-x-4 px-4 py-3 rounded-lg bg-secondary-container text-primary font-bold cursor-pointer duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-body-lg text-body-lg">Gallery</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all cursor-pointer duration-200" href="#">
+<span class="material-symbols-outlined">auto_awesome_motion</span>
+<span class="font-body-lg text-body-lg">Collections</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all cursor-pointer duration-200" href="#">
+<span class="material-symbols-outlined">camera</span>
+<span class="font-body-lg text-body-lg">Photographers</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all cursor-pointer duration-200" href="#">
+<span class="material-symbols-outlined">palette</span>
+<span class="font-body-lg text-body-lg">Exhibitions</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all cursor-pointer duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-body-lg text-body-lg">Account</span>
+</a>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/30">
+<button class="w-full py-3 px-4 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center space-x-2 hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-sm">logout</span>
+<span class="font-label-md text-label-md">Sign Out</span>
+</button>
+</div>
+</nav>
+<!-- Top App Bar (Mobile) -->
+<header class="md:hidden flex justify-between items-center px-margin-mobile h-16 w-full fixed top-0 z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30 flat no shadows">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform p-2">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md-mobile text-primary tracking-widest text-center flex-1">TONG AN</h1>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform p-2">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-80 pt-20 md:pt-12 px-margin-mobile md:px-margin-desktop pb-32 max-w-container-max mx-auto w-full">
+<!-- Header & Actions -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Photo Library</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage your high-end cinematic photography collection.</p>
+</div>
+<button class="hidden md:flex items-center space-x-2 bg-primary-container text-on-primary-container px-6 py-3 rounded hover:bg-primary-fixed transition-colors shadow-lg active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+<span class="font-label-md text-label-md">Add Photo</span>
+</button>
+</div>
+<!-- Search & Filter Bar -->
+<div class="glass-panel p-4 rounded-lg border border-surface-container-high mb-8 flex flex-col md:flex-row gap-4 items-center">
+<div class="relative w-full md:w-96 group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-surface-container-low border border-surface-container-high text-on-surface rounded pl-12 pr-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md text-body-md placeholder:text-on-surface-variant/50" placeholder="Search photos by title..." type="text"/>
+</div>
+<div class="w-full md:w-auto flex gap-4 overflow-x-auto pb-2 md:pb-0 hide-scrollbar flex-1">
+<button class="px-4 py-2 border border-primary text-primary rounded-full font-caption text-caption whitespace-nowrap hover:bg-primary/10 transition-colors">All</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant rounded-full font-caption text-caption whitespace-nowrap hover:border-primary hover:text-primary transition-colors">Cinematic</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant rounded-full font-caption text-caption whitespace-nowrap hover:border-primary hover:text-primary transition-colors">Portrait</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant rounded-full font-caption text-caption whitespace-nowrap hover:border-primary hover:text-primary transition-colors">Landscape</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant rounded-full font-caption text-caption whitespace-nowrap hover:border-primary hover:text-primary transition-colors">Street</button>
+</div>
+<div class="flex items-center gap-2 border-l border-outline-variant/30 pl-4 w-full md:w-auto">
+<span class="text-on-surface-variant font-caption text-caption">Sort by:</span>
+<select class="bg-transparent text-on-surface border-none focus:ring-0 font-body-md text-body-md cursor-pointer pr-8">
+<option class="bg-surface-container">Newest First</option>
+<option class="bg-surface-container">Oldest First</option>
+<option class="bg-surface-container">Price: High to Low</option>
+</select>
+</div>
+</div>
+<!-- Photo Grid (Bento/Masonry Hybrid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Item 1 -->
+<div class="group relative bg-surface-container-low border border-surface-container-high rounded overflow-hidden flex flex-col hover:border-primary/50 transition-colors duration-300">
+<div class="relative aspect-[3/2] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly cinematic photograph of a mysterious silhouette walking down a neon-lit, rain-slicked alleyway in Phnom Penh during the golden hour. The lighting is moody, relying on deep blacks and charcoal shadows, juxtaposed against sharp golden and amber reflections on the wet pavement. Shot in 16:9 aspect ratio style, conveying a high-end, gallery-worthy minimalist noir aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLd94hanisFuQ6A6bGIVx-ulis5SxfxRjxP9XjIwiCr_Z_z8CZgYBEbA01a8dBu7L7dfp6qIN_RsJEDzBOfyUOdVLHdDpgr7RE729qQMOzSqRQhtR2sovSoG7VtUfqIVZTN5sWXMozJGvU1MUEH6k0eFOEvmQA7SoidwFPyrsSDRk4CAWTFOn1tXeKp-dx2IA3SHVokBDgMefcF9dMgRS3pgHqq0rSXT13UcEIzKEpKWboyuQ8bMlduw"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-surface-container-lowest/80 backdrop-blur border border-outline-variant/50 px-2 py-1 rounded text-primary font-caption text-[10px] uppercase tracking-wider">Cinematic</span>
+</div>
+<div class="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="bg-surface-container-lowest/90 backdrop-blur p-2 rounded-full text-on-surface hover:text-primary hover:bg-surface-bright transition-all shadow-lg active:scale-95" title="Edit">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="bg-surface-container-lowest/90 backdrop-blur p-2 rounded-full text-error hover:bg-error/10 transition-all shadow-lg active:scale-95" title="Delete">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold truncate pr-2">Midnight Monsoon</h3>
+<span class="font-label-md text-label-md text-primary shrink-0">$1,200</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant truncate">Leica M11 • 35mm f/1.4</p>
+</div>
+<div class="mt-4 flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+<span class="font-caption text-caption text-on-surface-variant">Published</span>
+</div>
+</div>
+</div>
+<!-- Item 2 (Vertical emphasis) -->
+<div class="group relative bg-surface-container-low border border-surface-container-high rounded overflow-hidden flex flex-col hover:border-primary/50 transition-colors duration-300 row-span-2">
+<div class="relative flex-1 min-h-[300px] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A stunning, high-contrast black and white portrait of a Cambodian elder with deep, textured facial features. The lighting is dramatic chiaroscuro, utilizing a single directional light source that casts deep shadows over half the face, typical of a prestige gallery piece. The aesthetic is extremely minimalist, focusing purely on the subject's expression against a void-like charcoal background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHRCzaNeut6Pg7-EbSUuMet6ul3RVSqV-AVpeQ17Hzwd674ySY5rWIRmcDbL4G1xYjMt8t3UkbkbCRxUEDUmT0AExuQvh8HbZGYThp9I0vzzCqqH6cXP0mU0OBFrAhe2mAddZ3KHd3sEL4KgCzosWxs9XOnlCGYg4VZd7WeiYJwGxlOd-ACDHE4DAOcdi3yDrDhuk4W0a3QeNe-8efDNsvcCQXO0piWPYoMre-4jm-GqdQJpdidOY4xQ"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-surface-container-lowest/80 backdrop-blur border border-outline-variant/50 px-2 py-1 rounded text-primary font-caption text-[10px] uppercase tracking-wider">Portrait</span>
+</div>
+<div class="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="bg-surface-container-lowest/90 backdrop-blur p-2 rounded-full text-on-surface hover:text-primary hover:bg-surface-bright transition-all shadow-lg active:scale-95" title="Edit">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="bg-surface-container-lowest/90 backdrop-blur p-2 rounded-full text-error hover:bg-error/10 transition-all shadow-lg active:scale-95" title="Delete">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold line-clamp-2 pr-2">Wisdom of Years</h3>
+<span class="font-label-md text-label-md text-primary shrink-0">$2,500</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant truncate">Hasselblad X1D II</p>
+</div>
+<div class="mt-4 flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+<span class="font-caption text-caption text-on-surface-variant">Published</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group relative bg-surface-container-low border border-surface-container-high rounded overflow-hidden flex flex-col hover:border-primary/50 transition-colors duration-300">
+<div class="relative aspect-[3/2] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A breathtaking, minimalist landscape photograph of a vast, empty salt flat at dusk. The horizon line is perfectly centered, separating a deep indigo sky from the mirror-like ground. A single, tiny, indistinct figure stands in the distance. The lighting is soft and ethereal, emphasizing the infinite space and silence, fitting a high-end contemporary art gallery style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgMGRit5IzSLO6dKbtgCSS9_aytmnqFztAFKNpnz3HqAq9x9TIXDU8u0WU6I1diOJwRTQGlsNwMxDEnlzSPFv-7ZMqiYiTWQjRqhYxjf3DAQ350-8NHJmYj0PC6Zm-yUzD4keD__BJN7sNBJgrzSp_KQoQ67fDjdlbEnpWMoS3pBB7BKsVHQcea3FNnR8ce83ozwe-bQsTDNHlYMllna2tAnl8p4eTLjeRsZaufxUahfHZudGlOgoPzA"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-surface-container-lowest/80 backdrop-blur border border-outline-variant/50 px-2 py-1 rounded text-primary font-caption text-[10px] uppercase tracking-wider">Landscape</span>
+</div>
+<div class="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="bg-surface-container-lowest/90 backdrop-blur p-2 rounded-full text-on-surface hover:text-primary hover:bg-surface-bright transition-all shadow-lg active:scale-95" title="Edit">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="bg-surface-container-lowest/90 backdrop-blur p-2 rounded-full text-error hover:bg-error/10 transition-all shadow-lg active:scale-95" title="Delete">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold truncate pr-2">Horizon Zero</h3>
+<span class="font-label-md text-label-md text-primary shrink-0">$850</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant truncate">Sony A7R IV</p>
+</div>
+<div class="mt-4 flex items-center gap-2">
+<div class="w-2 h-2 rounded-full border border-surface-container-highest bg-transparent"></div>
+<span class="font-caption text-caption text-on-surface-variant">Draft</span>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="group relative bg-surface-container-low border border-surface-container-high rounded overflow-hidden flex flex-col hover:border-primary/50 transition-colors duration-300">
+<div class="relative aspect-[3/2] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A gritty, yet elegant architectural shot of a brutalist building facade in shadow, with a single, sharp diagonal sliver of golden hour sunlight cutting across the concrete texture. The composition is highly geometric and abstract, relying on deep blacks and warm golden tones to create a cinematic, authoritative gallery piece." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrZu-j2m5h35xLUW5QOtdm2cYvxWYGW2W7d7Hvo8z1e97SNJ54CD1gZMMEi_tkdjw-7EP2nvyfY47d-wf8zNgMnXeEZq7oSkqVUVHJm-UvUPPwI2UdTPhNGh_gYApWZVMAZUpy73hwV1sJY56KEVzqmlMwzJDCwzVW-MvAlbih_7WD2TP19ZmIEHFyN-bR0ZD5cBIT2ZYzZb3DfFkt-qLWRwxFrdLMmt6HFrQZHNZouZMq6qbmpurP9Q"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-surface-container-lowest/80 backdrop-blur border border-outline-variant/50 px-2 py-1 rounded text-primary font-caption text-[10px] uppercase tracking-wider">Architecture</span>
+</div>
+<div class="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="bg-surface-container-lowest/90 backdrop-blur p-2 rounded-full text-on-surface hover:text-primary hover:bg-surface-bright transition-all shadow-lg active:scale-95" title="Edit">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="bg-surface-container-lowest/90 backdrop-blur p-2 rounded-full text-error hover:bg-error/10 transition-all shadow-lg active:scale-95" title="Delete">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold truncate pr-2">Concrete Slice</h3>
+<span class="font-label-md text-label-md text-primary shrink-0">$1,500</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant truncate">Fuji GFX 100S</p>
+</div>
+<div class="mt-4 flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+<span class="font-caption text-caption text-on-surface-variant">Published</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-16 flex justify-center">
+<button class="bg-transparent border border-outline-variant text-on-surface px-8 py-3 rounded hover:border-primary hover:text-primary transition-colors font-label-md text-label-md tracking-widest uppercase">
+                Load More
+            </button>
+</div>
+</main>
+<!-- Floating Action Button (Mobile Only) -->
+<button class="md:hidden fixed bottom-24 right-6 bg-primary-container text-on-primary-container p-4 rounded-full shadow-lg active:scale-95 transition-transform z-40 flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+<!-- Bottom Nav Bar (Mobile) -->
+<nav class="md:hidden flex justify-around items-center h-16 px-4 bg-background/90 backdrop-blur-xl fixed bottom-0 w-full z-50 rounded-t-xl border-t border-outline-variant/20 shadow-lg">
+<a class="text-on-secondary-fixed-variant flex flex-col items-center p-2 hover:text-primary-fixed transition-all scale-110 duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="text-on-secondary-fixed-variant flex flex-col items-center p-2 hover:text-primary-fixed transition-all scale-110 duration-200" href="#">
+<span class="material-symbols-outlined">search</span>
+</a>
+<a class="text-on-secondary-fixed-variant flex flex-col items-center p-2 hover:text-primary-fixed transition-all scale-110 duration-200" href="#">
+<span class="material-symbols-outlined">favorite</span>
+</a>
+<a class="text-primary flex flex-col items-center p-2 hover:text-primary-fixed transition-all scale-110 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+</a>
+</nav>
+<script>
+        // Simple search input focus effect
+        document.querySelector('input[type="text"]').addEventListener('focus', function() {
+            this.parentElement.classList.add('ring-1', 'ring-primary');
+        });
+        document.querySelector('input[type="text"]').addEventListener('blur', function() {
+            this.parentElement.classList.remove('ring-1', 'ring-primary');
+        });
+    </script>
+</body></html>

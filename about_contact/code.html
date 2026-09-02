@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tong An Photography - Behind the Camera</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#474746",
+                    "inverse-on-surface": "#313030",
+                    "on-tertiary": "#2f3131",
+                    "on-primary-container": "#554300",
+                    "primary-fixed-dim": "#e9c349",
+                    "tertiary-fixed-dim": "#c7c6c6",
+                    "on-surface": "#e5e2e1",
+                    "outline": "#99907c",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "secondary": "#c8c6c5",
+                    "tertiary-container": "#b3b3b3",
+                    "on-secondary": "#313030",
+                    "surface-container": "#201f1f",
+                    "error": "#ffb4ab",
+                    "on-secondary-container": "#b7b5b4",
+                    "primary-fixed": "#ffe088",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "secondary-fixed": "#e5e2e1",
+                    "outline-variant": "#4d4635",
+                    "surface-tint": "#e9c349",
+                    "on-tertiary-fixed-variant": "#464747",
+                    "surface-container-highest": "#353534",
+                    "on-primary-fixed": "#241a00",
+                    "secondary-container": "#474746",
+                    "on-error-container": "#ffdad6",
+                    "on-primary": "#3c2f00",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-dim": "#131313",
+                    "inverse-surface": "#e5e2e1",
+                    "background": "#131313",
+                    "surface": "#131313",
+                    "on-tertiary-container": "#444545",
+                    "primary-container": "#d4af37",
+                    "surface-bright": "#3a3939",
+                    "tertiary": "#cfcece",
+                    "surface-container-high": "#2a2a2a",
+                    "error-container": "#93000a",
+                    "primary": "#f2ca50",
+                    "inverse-primary": "#735c00",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-variant": "#353534",
+                    "tertiary-fixed": "#e3e2e2",
+                    "on-surface-variant": "#d0c5af",
+                    "on-background": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Playfair Display"],
+                    "caption": ["Manrope"],
+                    "label-md": ["Manrope"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+        .glass-panel { background: rgba(26, 26, 26, 0.4); backdrop-filter: blur(12px); border: 1px solid theme('colors.surface-container-high'); }
+        .gold-accent-hover:hover { border-color: theme('colors.primary'); box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.1); }
+    </style>
+</head>
+<body class="antialiased font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform hidden md:block">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary tracking-widest font-bold">TONG AN</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform hidden md:block">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-32 md:pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full space-y-24">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center min-h-[60vh]">
+<div class="md:col-span-5 space-y-8 z-10">
+<h1 class="font-display-lg text-display-lg text-on-surface">Behind the <span class="text-primary italic font-headline-lg">Camera</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Capturing the unseen essence of Cambodia through a lens of profound shadow and golden light. Every frame is a narrative, a fleeting moment crystallized into cinematic permanence.
+                </p>
+<div class="flex gap-4">
+<a class="inline-block bg-primary text-background font-label-md text-label-md px-8 py-4 rounded hover:bg-primary-fixed transition-colors" href="#contact">Reach Out</a>
+</div>
+</div>
+<div class="md:col-span-7 relative">
+<div class="aspect-[3/2] w-full overflow-hidden border border-surface-container-high rounded-lg relative">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast black and white portrait of a professional photographer in a dimly lit, minimalist studio. The photographer holds a classic rangefinder camera, partially obscuring their face. A single shaft of dramatic golden-hour light cuts across the scene, highlighting the texture of the camera and the photographer's focused expression. Deep shadows create a sense of mystery and artistic depth, perfectly aligning with a premium gallery aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmo0_Jk7ZEy0-kHkQv91heV0X3xOH1Pkn1hXAPUxjn4eCSLu8zKAre5B2mMBIqifd-iXKHOPZvmYmBfjl-YC-QxABTmnMwKNxBsfWieemoZCO9jTJYxmPRiysgpG9E0EdAI3xnmhc81gw8gYXWjNTBmEv2jzEayKLTyBTNvtsO3vxA2tlxJUJR6STEVqs7ErIzE8xWMYJkgpz4wSH4jhNfhnLXgPcDOOGvcgvwY0itJhgB1QkFvHsDrg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+</div>
+</div>
+</section>
+<!-- Contact & Details Bento -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter" id="contact">
+<!-- Contact Form -->
+<div class="md:col-span-7 glass-panel p-8 rounded-xl space-y-8">
+<h2 class="font-headline-md text-headline-md text-on-surface">Get in Touch</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-caption uppercase text-on-surface-variant block">Name</label>
+<input class="w-full bg-surface-container-low border border-surface-container-high rounded text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors p-3" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-caption uppercase text-on-surface-variant block">Email</label>
+<input class="w-full bg-surface-container-low border border-surface-container-high rounded text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors p-3" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-caption uppercase text-on-surface-variant block">Subject</label>
+<input class="w-full bg-surface-container-low border border-surface-container-high rounded text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors p-3" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-caption uppercase text-on-surface-variant block">Message</label>
+<textarea class="w-full bg-surface-container-low border border-surface-container-high rounded text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors p-3" rows="4"></textarea>
+</div>
+<button class="bg-transparent border border-primary text-primary font-label-md text-label-md px-8 py-3 rounded hover:bg-primary/10 transition-colors w-full md:w-auto" type="button">Send Message</button>
+</form>
+</div>
+<!-- Socials & Info -->
+<div class="md:col-span-5 space-y-gutter">
+<div class="glass-panel p-8 rounded-xl space-y-6 h-full flex flex-col justify-center">
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Connect</h3>
+<div class="space-y-4">
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-12 h-12 rounded-full border border-surface-container-high flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="send">send</span>
+</div>
+<span class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors">Telegram</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-12 h-12 rounded-full border border-surface-container-high flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="thumb_up">thumb_up</span>
+</div>
+<span class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors">Facebook</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-12 h-12 rounded-full border border-surface-container-high flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="photo_camera">photo_camera</span>
+</div>
+<span class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors">Instagram</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="space-y-12 max-w-3xl mx-auto w-full">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-center text-on-surface">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<div class="border-b border-surface-container-high pb-4">
+<button class="w-full text-left flex justify-between items-center py-4 text-on-surface hover:text-primary transition-colors faq-toggle">
+<span class="font-body-lg text-body-lg">How do I download purchased images?</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</button>
+<div class="hidden text-on-surface-variant font-body-md text-body-md pb-4 pt-2">
+                        Upon successful purchase, high-resolution files are immediately available in your 'Collections' dashboard. A secure download link will also be dispatched to your registered email address.
+                    </div>
+</div>
+<div class="border-b border-surface-container-high pb-4">
+<button class="w-full text-left flex justify-between items-center py-4 text-on-surface hover:text-primary transition-colors faq-toggle">
+<span class="font-body-lg text-body-lg">What are the licensing terms?</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</button>
+<div class="hidden text-on-surface-variant font-body-md text-body-md pb-4 pt-2">
+                        We offer Standard and Extended licenses. Standard covers personal use and limited commercial application, while Extended grants broader commercial rights. Please review our full terms for specific details.
+                    </div>
+</div>
+<div class="border-b border-surface-container-high pb-4">
+<button class="w-full text-left flex justify-between items-center py-4 text-on-surface hover:text-primary transition-colors faq-toggle">
+<span class="font-body-lg text-body-lg">Do you accept commission work?</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</button>
+<div class="hidden text-on-surface-variant font-body-md text-body-md pb-4 pt-2">
+                        Yes, bespoke commissions are accepted selectively. Please use the contact form above with details of your project to initiate a consultation.
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-surface-dim border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col items-center text-center space-y-12">
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-widest font-bold">TONG AN</div>
+<nav class="flex flex-wrap justify-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Collections</a>
+<a class="font-body-md text-body-md text-primary underline transition-colors cursor-pointer" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Terms</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">© 2024 Tong An Photography. All Rights Reserved.</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-background/90 backdrop-blur-xl border-t border-outline-variant/20 shadow-lg flex justify-around items-center h-16 px-4 md:hidden">
+<a class="text-on-secondary-fixed-variant flex flex-col items-center p-2 hover:text-primary-fixed transition-all scale-110 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<a class="text-on-secondary-fixed-variant flex flex-col items-center p-2 hover:text-primary-fixed transition-all scale-110 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</a>
+<a class="text-on-secondary-fixed-variant flex flex-col items-center p-2 hover:text-primary-fixed transition-all scale-110 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</a>
+<a class="text-on-secondary-fixed-variant flex flex-col items-center p-2 hover:text-primary-fixed transition-all scale-110 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+</nav>
+<script>
+        // Simple FAQ toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('.material-symbols-outlined');
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.textContent = 'expand_less';
+                } else {
+                    content.classList.add('hidden');
+                    icon.textContent = 'expand_more';
+                }
+            });
+        });
+    </script>
+</body></html>

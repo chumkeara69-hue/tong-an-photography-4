@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tong An Photography - Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#474746",
+                      "inverse-on-surface": "#313030",
+                      "on-tertiary": "#2f3131",
+                      "on-primary-container": "#554300",
+                      "primary-fixed-dim": "#e9c349",
+                      "tertiary-fixed-dim": "#c7c6c6",
+                      "on-surface": "#e5e2e1",
+                      "outline": "#99907c",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "secondary": "#c8c6c5",
+                      "tertiary-container": "#b3b3b3",
+                      "on-secondary": "#313030",
+                      "surface-container": "#201f1f",
+                      "error": "#ffb4ab",
+                      "on-secondary-container": "#b7b5b4",
+                      "primary-fixed": "#ffe088",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "secondary-fixed": "#e5e2e1",
+                      "outline-variant": "#4d4635",
+                      "surface-tint": "#e9c349",
+                      "on-tertiary-fixed-variant": "#464747",
+                      "surface-container-highest": "#353534",
+                      "on-primary-fixed": "#241a00",
+                      "secondary-container": "#474746",
+                      "on-error-container": "#ffdad6",
+                      "on-primary": "#3c2f00",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-dim": "#131313",
+                      "inverse-surface": "#e5e2e1",
+                      "background": "#131313",
+                      "surface": "#131313",
+                      "on-tertiary-container": "#444545",
+                      "primary-container": "#d4af37",
+                      "surface-bright": "#3a3939",
+                      "tertiary": "#cfcece",
+                      "surface-container-high": "#2a2a2a",
+                      "error-container": "#93000a",
+                      "primary": "#f2ca50",
+                      "inverse-primary": "#735c00",
+                      "on-primary-fixed-variant": "#574500",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-variant": "#353534",
+                      "tertiary-fixed": "#e3e2e2",
+                      "on-surface-variant": "#d0c5af",
+                      "on-background": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "caption": [
+                              "Manrope"
+                      ],
+                      "label-md": [
+                              "Manrope"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+          font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md text-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar (Mobile & Tablet) -->
+<header class="md:hidden fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center px-margin-mobile h-16 w-full">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="font-headline-md text-headline-md-mobile text-primary tracking-widest uppercase">TONG AN</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</header>
+<!-- Side Navigation (Desktop) -->
+<nav class="hidden md:flex flex-col p-6 space-y-4 bg-surface-container-lowest h-full w-80 fixed left-0 top-0 z-[60] border-r border-outline-variant shadow-20px-40px-rgba(0,0,0,0.8)">
+<div class="font-headline-md text-headline-md text-primary mb-8 tracking-widest uppercase">TONG AN</div>
+<ul class="space-y-2 flex-grow">
+<!-- Active Tab -->
+<li>
+<a class="bg-secondary-container text-primary font-bold rounded-lg flex items-center p-3 gap-4 cursor-pointer duration-200" href="#">
+<span class="material-symbols-outlined fill-icon">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+</li>
+<!-- Inactive Tabs -->
+<li>
+<a class="text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all rounded-lg flex items-center p-3 gap-4 cursor-pointer duration-200" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="font-label-md text-label-md">Photos</span>
+</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all rounded-lg flex items-center p-3 gap-4 cursor-pointer duration-200" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-md text-label-md">Orders</span>
+</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all rounded-lg flex items-center p-3 gap-4 cursor-pointer duration-200" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-md text-label-md">Customers</span>
+</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all rounded-lg flex items-center p-3 gap-4 cursor-pointer duration-200" href="#">
+<span class="material-symbols-outlined">category</span>
+<span class="font-label-md text-label-md">Categories</span>
+</a>
+</li>
+</ul>
+<div class="mt-auto border-t border-outline-variant/30 pt-6">
+<button class="w-full flex items-center justify-between p-3 text-on-surface-variant hover:text-primary transition-colors">
+<span class="font-label-md text-label-md flex items-center gap-2"><span class="material-symbols-outlined">dark_mode</span> Theme</span>
+<div class="w-10 h-6 bg-primary-container rounded-full relative">
+<div class="absolute right-1 top-1 w-4 h-4 bg-on-primary-container rounded-full"></div>
+</div>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-24 pb-24 md:pt-margin-desktop md:pb-margin-desktop md:ml-80 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-12">
+<!-- Header -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Overview</h1>
+<p class="text-on-surface-variant mt-2">Welcome back, Admin.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary-container text-[#0D0D0D] font-bold font-label-md text-label-md px-6 py-3 rounded flex items-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined">upload</span>
+                    Upload Photo
+                </button>
+<button class="border border-primary-container text-primary-container font-label-md text-label-md px-6 py-3 rounded flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">verified</span>
+                    Verify Payments
+                </button>
+</div>
+</header>
+<!-- Stats Grid -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-high border border-surface-bright rounded-lg p-6 flex flex-col justify-between h-32 hover:border-outline-variant transition-colors group">
+<div class="flex justify-between items-start text-on-surface-variant">
+<span class="font-label-md text-label-md uppercase tracking-wider">Total Sales</span>
+<span class="material-symbols-outlined text-primary-container group-hover:scale-110 transition-transform">attach_money</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">$24,500</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container-high border border-surface-bright rounded-lg p-6 flex flex-col justify-between h-32 hover:border-outline-variant transition-colors group">
+<div class="flex justify-between items-start text-on-surface-variant">
+<span class="font-label-md text-label-md uppercase tracking-wider">Pending</span>
+<span class="material-symbols-outlined text-error group-hover:scale-110 transition-transform">pending_actions</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">12</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container-high border border-surface-bright rounded-lg p-6 flex flex-col justify-between h-32 hover:border-outline-variant transition-colors group">
+<div class="flex justify-between items-start text-on-surface-variant">
+<span class="font-label-md text-label-md uppercase tracking-wider">Photos</span>
+<span class="material-symbols-outlined text-primary-container group-hover:scale-110 transition-transform">image</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">1,432</div>
+</div>
+<!-- Stat Card 4 -->
+<div class="bg-surface-container-high border border-surface-bright rounded-lg p-6 flex flex-col justify-between h-32 hover:border-outline-variant transition-colors group">
+<div class="flex justify-between items-start text-on-surface-variant">
+<span class="font-label-md text-label-md uppercase tracking-wider">Downloads</span>
+<span class="material-symbols-outlined text-primary-container group-hover:scale-110 transition-transform">download</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">8,904</div>
+</div>
+</section>
+<!-- Recent Orders Table -->
+<section class="bg-surface-container-high border border-surface-bright rounded-lg overflow-hidden">
+<div class="p-6 border-b border-surface-bright flex justify-between items-center">
+<h2 class="font-headline-md text-headline-md text-on-surface">Recent Orders</h2>
+<button class="text-primary-container font-label-md text-label-md hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-highest border-b border-surface-bright font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">
+<th class="p-4 font-semibold">Order ID</th>
+<th class="p-4 font-semibold">Customer</th>
+<th class="p-4 font-semibold">Amount</th>
+<th class="p-4 font-semibold">Status</th>
+<th class="p-4 font-semibold text-right">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y divide-surface-bright">
+<tr class="hover:bg-surface-container-highest/50 transition-colors">
+<td class="p-4 text-on-surface">#ORD-9082</td>
+<td class="p-4 text-on-surface-variant">Sokha Heng</td>
+<td class="p-4 text-on-surface">$1,200</td>
+<td class="p-4">
+<span class="px-2 py-1 rounded text-[10px] uppercase font-bold tracking-wider border border-[#A0A0A0] text-[#A0A0A0]">Pending</span>
+</td>
+<td class="p-4 text-right">
+<button class="text-primary hover:text-primary-fixed transition-colors">View Proof</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-highest/50 transition-colors">
+<td class="p-4 text-on-surface">#ORD-9081</td>
+<td class="p-4 text-on-surface-variant">Dara Phally</td>
+<td class="p-4 text-on-surface">$450</td>
+<td class="p-4">
+<span class="px-2 py-1 rounded text-[10px] uppercase font-bold tracking-wider border border-primary-container text-primary-container">Verified</span>
+</td>
+<td class="p-4 text-right">
+<button class="text-primary hover:text-primary-fixed transition-colors">View Proof</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-highest/50 transition-colors">
+<td class="p-4 text-on-surface">#ORD-9080</td>
+<td class="p-4 text-on-surface-variant">Chanrithy Ouk</td>
+<td class="p-4 text-on-surface">$890</td>
+<td class="p-4">
+<span class="px-2 py-1 rounded text-[10px] uppercase font-bold tracking-wider border border-primary-container text-primary-container">Verified</span>
+</td>
+<td class="p-4 text-right">
+<button class="text-primary hover:text-primary-fixed transition-colors">View Proof</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-background/90 backdrop-blur-xl border-t border-outline-variant/20 shadow-lg rounded-t-xl flex justify-around items-center h-16 px-4">
+<!-- Active -->
+<a class="text-primary flex flex-col items-center p-2 scale-110 duration-200" href="#">
+<span class="material-symbols-outlined fill-icon">dashboard</span>
+<span class="font-caption text-caption mt-1">Dash</span>
+</a>
+<!-- Inactive -->
+<a class="text-on-secondary-fixed-variant flex flex-col items-center p-2 hover:text-primary-fixed transition-all" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="font-caption text-caption mt-1">Photos</span>
+</a>
+<a class="text-on-secondary-fixed-variant flex flex-col items-center p-2 hover:text-primary-fixed transition-all" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-caption text-caption mt-1">Orders</span>
+</a>
+<a class="text-on-secondary-fixed-variant flex flex-col items-center p-2 hover:text-primary-fixed transition-all" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-caption text-caption mt-1">Users</span>
+</a>
+</nav>
+</body></html>
